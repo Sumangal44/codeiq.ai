@@ -1,0 +1,78 @@
+<!-- Navigation Bar -->
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-content">
+
+
+            <!-- Left logo/brand -->
+            <div class="navbar-brand">
+                <div class="logo-box">
+                    <svg class="logo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <span class="brand-text">CodeIQ.ai</span>
+            </div>
+
+            <!-- Right section -->
+            <div class="navbar-right">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- User Info -->
+                <div id="user-info" class="user-info hidden">
+                    <span id="welcome-text" class="welcome-text">Welcome back!</span>
+                    <div class="user-menu-wrapper">
+                        <button id="user-button" class="user-button">
+                            <img id="user-avatar" src="" alt="User Avatar" class="avatar-img" style="display: none;">
+                            <div id="user-avatar-fallback" class="avatar-fallback">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                            </div>
+                            <span id="user-name">My Account</span>
+                            <svg class="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div id="user-dropdown" class="user-dropdown hidden">
+                            <button id="profile-btn" class="dropdown-item">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                View Profile
+                            </button>
+                            <button id="logout-btn" class="dropdown-item">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
+                    <a href="quiz.html" class="quiz-button">Start Quiz</a>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div id="auth-buttons" class="auth-buttons">
+                    <button id="sign-in-btn" class="sign-in-btn">Sign In</button>
+                    <button id="sign-up-btn" class="sign-up-btn">Sign Up</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</nav>
