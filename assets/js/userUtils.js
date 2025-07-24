@@ -146,7 +146,8 @@ export function setupUserButton() {
       userAvatarFallback.style.display = "flex"
       // Show first letter of name in fallback
       const initials = firstName.charAt(0).toUpperCase()
-      userAvatarFallback.innerHTML = `<span class="text-white font-semibold">${initials}</span>`
+      userAvatarFallback.textContent = initials
+      userAvatarFallback.classList.add("text-white", "font-semibold")
     }
     
     // Setup dropdown functionality
