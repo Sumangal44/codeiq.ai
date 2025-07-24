@@ -132,7 +132,7 @@ export function setupUserButton() {
   const currentUser = getCurrentUser()
   
   if (currentUser && userAccountBtn) {
-    const firstName = currentUser.name.split(' ')[0] || "User"
+    const firstName = currentUser.name?.split(' ')[0] || "User"
     userAccountBtn.classList.remove("hidden")
     userAccountBtn.classList.add("flex")
     
