@@ -1,11 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard - CodeIQ.ai</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+<body class="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <div class="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 py-4 sm:py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-6">
+                <a href="../index.html" class="inline-flex items-center text-zinc-600 hover:text-zinc-800 transition-colors">
+                    <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="text-sm sm:text-base">Back to Home</span>
+                </a>
+                
+                <div class="relative">
+                    <button id="user-account-btn" class="hidden items-center space-x-2 text-zinc-700 hover:text-zinc-900 px-3 py-2 rounded-lg hover:bg-white/50 transition-colors">
+                        <img id="user-avatar" class="h-8 w-8 rounded-full border-2 border-zinc-200" src="" alt="User Avatar" style="display: none;">
+                        <div id="user-avatar-fallback" class="h-8 w-8 rounded-full bg-zinc-600 flex items-center justify-center">
+                            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <span id="user-account-name">Account</span>
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-40 sm:w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-zinc-200">
+                        <a href="profile.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100 transition-colors">
+                            <svg class="h-4 w-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                            View Profile
+                        </a>
+                        <button id="logout-btn" class="block w-full text-left px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100 transition-colors">
+                            <svg class="h-4 w-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                            </svg>
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mb-6 sm:mb-8">
+                <h1 class="text-4xl font-bold text-zinc-900 mb-4 flex items-center justify-center">
+                    <svg class="h-10 w-10 mr-3 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    Leaderboard
+                </h1>
+                <p class="text-zinc-600 mb-6">See how you rank among the top CodeIQ.ai performers</p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+                    <select id="leaderboard-type" class="px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 bg-white text-zinc-900 font-medium hover:border-zinc-400 transition-all duration-200">
+                        <option value="global">Global Leaderboard</option>
+                        <option value="weekly">This Week</option>
+                    </select>
+                    <select id="category-filter" class="px-4 py-3 border border-zinc-300 rounded-lg focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 bg-white text-zinc-900 font-medium hover:border-zinc-400 transition-all duration-200">
+                        <option value="">All Categories</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="React">React</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="Node.js">Node.js</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="Java">Java</option>
+                        <option value="C++">C++</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loading" class="text-center py-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-zinc-600 mx-auto mb-4"></div>
+                <p class="text-zinc-600">Loading leaderboard...</p>
+            </div>
+
+            <div id="leaderboard-container" class="hidden bg-white rounded-xl shadow-lg overflow-hidden border border-zinc-200">
+                <div id="empty-state" class="hidden text-center py-12">
+                    <div class="mb-6">
+                        <svg class="h-16 w-16 text-zinc-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <p class="text-zinc-600 mb-4">No scores found for this category yet.</p>
+                        <a href="quiz.html" class="inline-block bg-zinc-800 text-white px-6 py-3 rounded-lg hover:bg-zinc-900 transition-colors">
+                            Be the first to take a quiz!
+                        </a>
+                    </div>
+                </div>
+
+                <div id="leaderboard-table" class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-zinc-50">
+                            <tr>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Rank</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Player</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Average Score</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Total Quizzes</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Badges</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-zinc-600 uppercase tracking-wider">Favorite Category</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body" class="bg-white divide-y divide-zinc-200">
+                            <!-- Leaderboard entries will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="quiz.html" class="inline-flex items-center bg-zinc-800 text-white px-6 py-3 rounded-lg hover:bg-zinc-900 transition-colors transform hover:scale-105">
+                        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Take a Quiz
+                    </a>
+                    <a href="index.html" class="inline-flex items-center border border-zinc-300 text-zinc-700 px-6 py-3 rounded-lg hover:bg-zinc-50 hover:border-zinc-400 transition-colors">
+                        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                        </svg>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-zinc-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-lg">
+                            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-zinc-900">CodeIQ.ai</span>
+                    </div>
+                    <p class="text-zinc-600 mb-4 text-sm sm:text-base">
+                        Test your coding skills with AI-generated questions and compete with developers worldwide.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-2">
+                    <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Links</h3>
+                    <div class="space-y-1">
+                        <a href="../index.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Home</a>
+                        <a href="quiz.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Start Quiz</a>
+                        <a href="profile.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Profile</a>
+                    </div>
+                </div>
+
+                <!-- Legal -->
+                <div class="space-y-2">
+                    <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Legal</h3>
+                    <div class="space-y-1">
+                        <a href="#" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Terms of Service</a>
+                        <a href="#" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-zinc-200 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+                <p class="text-zinc-500 text-sm text-center sm:text-left">
+                    <span id="copyright"></span>
+                </p>
+                <div class="flex items-center space-x-4">
+                    <span class="text-zinc-500 text-sm">Made with ❤️ for developers</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const year = new Date().getFullYear();
+        document.getElementById('copyright').textContent = `© ${year} CodeIQ.ai - All rights reserved`;
+    </script>
+
+    <script type="module" src="../assets/js/leaderboard.js"></script>
 </body>
 </html>
