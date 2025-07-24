@@ -210,15 +210,25 @@ function addToLeaderboard(userResult) {
     if (existingUserIndex !== -1) {
       // Update existing user's score if this is better
       const existingUser = users[existingUserIndex]
-      if ((userResult.score || 0) > (existingUser.score || 0)) {
-        users[existingUserIndex] = {
-          ...existingUser,
+      // Increment quizzesCompleted regardless of score update
+      users[existingUserIndex] = {
+        ...existingUser,
+        quizzesCompleted: (existingUser.quizzesCompleted || 0) + 1,
+        ...(userResult.score > (existingUser.score || 0) && {
           score: userResult.score || 0,
-          quizzesCompleted: (existingUser.quizzesCompleted || 0) + 1,
           badges: [...(existingUser.badges || []), ...(userResult.badges || [])],
           lastPlayed: new Date().toISOString()
-        }
+        })
       }
+    } else {
+      // Add new user to leaderboard
+      users.push({
+        ...userResult,
+        score: userResult.score || 0,
+        quizzesCompleted: 1,
+        badges: userResult.badges || [],
+        lastPlayed: new Date().toISOString()
+      })
     }
     
     console.log("Added user result to leaderboard:", userResult)
