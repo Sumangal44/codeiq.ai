@@ -208,7 +208,7 @@ export function initializeDemoUsers() {
           { id: 'first-quiz', name: 'First Quiz', description: 'Completed first quiz' },
           { id: 'high-scorer', name: 'High Scorer', description: 'Scored above 800' }
         ],
-        createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+        createdAt: THIRTY_DAYS_AGO
       },
       {
         id: 'demo2',
