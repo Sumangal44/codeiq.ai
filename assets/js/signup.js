@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Create user with some demo data for better experience
     const userData = {
-      id: Date.now().toString(),
+      id: crypto.randomUUID(),
       name,
       email,
       password, // In a real app, this should be hashed
