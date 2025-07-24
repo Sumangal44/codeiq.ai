@@ -70,8 +70,10 @@ export function updateUserScore(newScore) {
   const userIndex = users.findIndex(user => user.id === currentUser.id)
   
   if (userIndex !== -1) {
-    users[userIndex].score = Math.max(users[userIndex].score, newScore)
-    users[userIndex].quizzesCompleted = (users[userIndex].quizzesCompleted || 0) + 1
+    if (newScore > users[userIndex].score) {
+      users[userIndex].score = newScore
+      users[userIndex].quizzesCompleted = (users[userIndex].quizzesCompleted || 0) + 1
+    }
     users[userIndex].lastQuizDate = new Date().toISOString()
     
     localStorage.setItem('users', JSON.stringify(users))
