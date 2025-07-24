@@ -104,7 +104,7 @@ function displayLeaderboard(data) {
         <td class="px-6 py-4 whitespace-nowrap">
           <div class="flex items-center">
             ${rankDisplay}
-            <span class="ml-2 text-sm font-medium text-gray-900">#${rank}</span>
+            <span class="ml-2 text-sm font-medium text-zinc-900">#${rank}</span>
           </div>
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
