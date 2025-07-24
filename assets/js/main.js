@@ -31,7 +31,7 @@ function initializeAuth() {
     if (authenticatedCTA) authenticatedCTA.classList.remove("hidden")
     if (unauthenticatedCTA) unauthenticatedCTA.classList.add("hidden")
 
-    const firstName = currentUser.name.split(' ')[0] || "User"
+    const firstName = currentUser.name?.split(' ')[0] || "User"
     if (welcomeText) welcomeText.textContent = `Welcome, ${firstName}!`
     if (userName) userName.textContent = firstName
 
