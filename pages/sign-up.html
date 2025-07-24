@@ -1,12 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up - CodeIQ.ai</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <p>sign up page</p>
-    
+
+<body class="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-lg">
+                        <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold text-zinc-900">CodeIQ.ai</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden sm:flex items-center space-x-2 sm:space-x-4">
+                    <a href="../index.html" class="text-zinc-600 hover:text-zinc-800 transition-colors text-sm sm:text-base">Home</a>
+                    <a href="sign-in.html" class="text-zinc-600 hover:text-zinc-800 px-3 sm:px-4 py-2 rounded-lg border border-zinc-600 hover:bg-zinc-50 transition-colors text-sm sm:text-base">Sign In</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="sm:hidden">
+                    <button id="mobile-menu-btn" class="text-zinc-600 hover:text-zinc-800 p-2 rounded-lg hover:bg-zinc-100 transition-colors">
+                        <svg id="hamburger-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="sm:hidden hidden border-t border-zinc-200">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="../index.html" class="block px-3 py-2 text-zinc-600 hover:text-zinc-800 hover:bg-zinc-100 rounded-lg transition-colors">Home</a>
+                    <a href="sign-in.html" class="block px-3 py-2 text-zinc-600 hover:text-zinc-800 hover:bg-zinc-100 rounded-lg transition-colors">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-md mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div class="text-center mb-6 sm:mb-8">
+            <div
+                class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-zinc-800 rounded-2xl mx-auto mb-4 sm:mb-6">
+                <svg class="h-6 w-6 sm:h-8 sm:w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                </svg>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-2">Create Your Account</h1>
+            <p class="text-zinc-600 text-sm sm:text-base">Join CodeIQ.ai and start testing your coding skills</p>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="bg-white rounded-xl shadow-lg border border-zinc-200 p-4 sm:p-6 lg:p-8">
+            <form id="signup-form" class="space-y-4 sm:space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-zinc-700 mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 transition-colors text-sm sm:text-base"
+                        placeholder="Enter your full name">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-sm font-medium text-zinc-700 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 transition-colors text-sm sm:text-base"
+                        placeholder="Enter your email">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-zinc-700 mb-2">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6"
+                        class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 transition-colors text-sm sm:text-base"
+                        placeholder="Create a password (min. 6 characters)">
+                </div>
+
+                <div>
+                    <label for="confirm-password" class="block text-sm font-medium text-zinc-700 mb-2">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="6"
+                        class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-zinc-500 transition-colors text-sm sm:text-base"
+                        placeholder="Confirm your password">
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input id="terms" name="terms" type="checkbox" required
+                            class="h-4 w-4 text-zinc-600 focus:ring-zinc-500 border-zinc-300 rounded">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="terms" class="text-zinc-700">
+                            I agree to the <a href="#" class="text-zinc-800 hover:text-zinc-900 underline">Terms of Service</a> 
+                            and <a href="#" class="text-zinc-800 hover:text-zinc-900 underline">Privacy Policy</a>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-zinc-800 text-white py-2 sm:py-3 px-4 rounded-lg font-semibold hover:bg-zinc-900 transition-all transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 text-sm sm:text-base">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="mt-4 sm:mt-6 text-center">
+                <p class="text-sm text-zinc-600">
+                    Already have an account?
+                    <a href="sign-in.html"
+                        class="text-zinc-800 hover:text-zinc-900 font-medium underline decoration-zinc-400 hover:decoration-zinc-600 transition-colors">Sign in</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Error/Success Messages -->
+        <div id="message" class="hidden mt-4 p-3 sm:p-4 rounded-lg text-sm sm:text-base"></div>
+
+        <!-- Features Section -->
+        <div class="mt-8 sm:mt-12 bg-white rounded-xl border border-zinc-200 p-4 sm:p-6">
+            <h3 class="text-base sm:text-lg font-semibold text-zinc-900 mb-4 text-center">What You'll Get</h3>
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <svg class="h-5 w-5 sm:h-6 sm:w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-zinc-700 text-xs sm:text-sm font-medium">AI Questions</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <svg class="h-5 w-5 sm:h-6 sm:w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-zinc-700 text-xs sm:text-sm font-medium">Earn Badges</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <svg class="h-5 w-5 sm:h-6 sm:w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-zinc-700 text-xs sm:text-sm font-medium">Track Progress</span>
+                </div>
+                <div class="text-center">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                        <svg class="h-5 w-5 sm:h-6 sm:w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-zinc-700 text-xs sm:text-sm font-medium">Global Ranking</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+                <!-- Footer -->
+                <footer class="bg-white border-t border-zinc-200 mt-16">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                            <!-- Company Info -->
+                            <div class="md:col-span-2">
+                                <div class="flex items-center space-x-2 mb-4">
+                                    <div class="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-lg">
+                                        <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-xl font-bold text-zinc-900">CodeIQ.ai</span>
+                                </div>
+                                <p class="text-zinc-600 mb-4 text-sm sm:text-base">
+                                    Test your coding skills with AI-generated questions and compete with developers
+                                    worldwide.
+                                </p>
+                            </div>
+
+                            <!-- Quick Links -->
+                            <div class="space-y-2">
+                                <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Links</h3>
+                                <div class="space-y-1">
+                                    <a href="index.html"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Home</a>
+                                    <a href="quiz.html"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Start
+                                        Quiz</a>
+                                    <a href="leaderboard.html"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Leaderboard</a>
+                                    <a href="profile.html"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Profile</a>
+                                </div>
+                            </div>
+
+                            <!-- Legal -->
+                            <div class="space-y-2">
+                                <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Legal</h3>
+                                <div class="space-y-1">
+                                    <a href="#"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Privacy
+                                        Policy</a>
+                                    <a href="#"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Terms
+                                        of Service</a>
+                                    <a href="#"
+                                        class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Contact
+                                        Us</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Bar -->
+                        <div
+                            class="border-t border-zinc-200 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+                            <p class="text-zinc-500 text-sm text-center sm:text-left">
+                                <span id="copyright"></span>
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-zinc-500 text-sm">Made with ❤️ for developers</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <script>
+                    const year = new Date().getFullYear();
+                    document.getElementById('copyright').textContent = `© ${year} CodeIQ.ai - All rights reserved`;
+
+                    // Mobile menu functionality
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const hamburgerIcon = document.getElementById('hamburger-icon');
+                        const closeIcon = document.getElementById('close-icon');
+
+                        if (mobileMenuBtn) {
+                            mobileMenuBtn.addEventListener('click', function() {
+                                const isOpen = !mobileMenu.classList.contains('hidden');
+                                
+                                if (isOpen) {
+                                    // Close menu
+                                    mobileMenu.classList.add('hidden');
+                                    hamburgerIcon.classList.remove('hidden');
+                                    closeIcon.classList.add('hidden');
+                                } else {
+                                    // Open menu
+                                    mobileMenu.classList.remove('hidden');
+                                    hamburgerIcon.classList.add('hidden');
+                                    closeIcon.classList.remove('hidden');
+                                }
+                            });
+                        }
+
+                        // Close mobile menu when clicking outside
+                        document.addEventListener('click', function(event) {
+                            if (!event.target.closest('nav')) {
+                                mobileMenu.classList.add('hidden');
+                                hamburgerIcon.classList.remove('hidden');
+                                closeIcon.classList.add('hidden');
+                            }
+                        });
+
+                        // Handle window resize
+                        window.addEventListener('resize', function() {
+                            if (window.innerWidth >= 640) {
+                                // Desktop - close mobile menu
+                                mobileMenu.classList.add('hidden');
+                                hamburgerIcon.classList.remove('hidden');
+                                closeIcon.classList.add('hidden');
+                            }
+                        });
+                    });
+                </script>
+
+                <script type="module" src="../assets/js/signup.js"></script>
+
 </body>
+
 </html>
