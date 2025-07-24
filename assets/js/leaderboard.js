@@ -100,7 +100,7 @@ function displayLeaderboard(data) {
     const badgesHtml = getBadgesHtml(user.badges)
     
     return `
-      <tr class="hover:bg-gray-50 transition-colors">
+      <tr class="hover:bg-zinc-50 transition-colors">
         <td class="px-6 py-4 whitespace-nowrap">
           <div class="flex items-center">
             ${rankDisplay}
