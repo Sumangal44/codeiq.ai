@@ -79,6 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Set remember me preference
       if (rememberMe) {
         localStorage.setItem('rememberUser', 'true')
+        localStorage.setItem('lastEmail', email)
+      } else {
+        localStorage.removeItem('rememberUser')
+        localStorage.removeItem('lastEmail')
       }
       
       showMessage('Signed in successfully! Redirecting...', 'success')
