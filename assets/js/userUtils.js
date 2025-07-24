@@ -1,5 +1,7 @@
 // Simple user authentication and management utilities
 
+const THIRTY_DAYS_AGO = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+
 // Get current logged-in user
 export function getCurrentUser() {
   const userStr = localStorage.getItem('currentUser')
