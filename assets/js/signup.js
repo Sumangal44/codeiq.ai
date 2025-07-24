@@ -30,7 +30,7 @@ function showMessage(message, type = 'error') {
   if (type === 'success') {
     setTimeout(() => {
       messageDiv.classList.add('hidden')
-    }, 3000)
+    }, SUCCESS_MESSAGE_TIMEOUT)
   }
 }
 
