@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentUser = localStorage.getItem('currentUser')
   if (currentUser) {
     // Redirect to homepage if already signed in
-    window.location.href = "../../index.html"
+    window.location.href = HOMEPAGE_PATH
     return
   }
 
