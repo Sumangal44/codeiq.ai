@@ -1,4 +1,9 @@
 
+// Constants for validation
+const MIN_PASSWORD_LENGTH = 8
+const SUCCESS_MESSAGE_TIMEOUT = 3000 // 3 seconds
+const HOMEPAGE_PATH = '../../index.html'
+
 // Simple user storage utility functions
 function saveUser(userData) {
   const users = JSON.parse(localStorage.getItem('users') || '[]')
