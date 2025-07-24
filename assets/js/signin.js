@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         email: user.email
       }
       
-      localStorage.setItem('currentUser', JSON.stringify(currentUserData))
+      sessionStorage.setItem('currentUser', JSON.stringify(currentUserData))
       
       // Set remember me preference
       if (rememberMe) {
