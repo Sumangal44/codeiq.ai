@@ -17,7 +17,7 @@ let questionsData = {}
 // Load questions from JSON file
 async function loadQuestions() {
   try {
-    const response = await fetch('../../data/questions.json')
+    const response = await fetch('/data/questions.json')
     if (!response.ok) {
       throw new Error('Failed to load questions')
     }
