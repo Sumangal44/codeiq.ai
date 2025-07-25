@@ -235,13 +235,13 @@ function displayQuestion() {
 function selectAnswer(answer, button) {
   // Remove previous selection
   document.querySelectorAll("#options-container button").forEach((btn) => {
-    btn.classList.remove("border-indigo-600", "bg-indigo-50")
+    btn.classList.remove("border-zinc-600", "bg-zinc-50")
     btn.classList.add("border-gray-200")
   })
 
   // Highlight selected answer
   button.classList.remove("border-gray-200")
-  button.classList.add("border-indigo-600", "bg-indigo-50")
+  button.classList.add("border-zinc-600", "bg-zinc-50")
 
   currentQuiz.selectedAnswer = answer
   document.getElementById("next-btn").disabled = false
