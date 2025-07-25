@@ -257,6 +257,12 @@ function showCategorySelection() {
 
 function startQuiz() {
   const category = document.getElementById("category-select").value
+  
+  if (!questionsData[category]) {
+    alert("Selected category is not available. Please choose a different category.")
+    return
+  }
+  
   currentQuiz.category = category
   currentQuiz.questions = [...questionsData[category]].sort(() => 0.5 - Math.random()).slice(0, 5)
   currentQuiz.currentQuestion = 0
