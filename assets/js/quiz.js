@@ -220,8 +220,8 @@ function displayQuestion() {
 
   question.options.forEach((option, index) => {
     const button = document.createElement("button")
-    button.className = "w-full p-4 text-left rounded-lg border-2 border-gray-200 hover:border-gray-300 transition-all"
-    button.innerHTML = `<span class="font-medium text-gray-700">${String.fromCharCode(65 + index)}. ${option}</span>`
+    button.className = "w-full p-4 text-left rounded-lg border-2 border-zinc-200 hover:border-zinc-300 transition-all"
+    button.innerHTML = `<span class="font-medium text-zinc-700">${String.fromCharCode(65 + index)}. ${option}</span>`
     button.addEventListener("click", () => selectAnswer(option, button))
     optionsContainer.appendChild(button)
   })
