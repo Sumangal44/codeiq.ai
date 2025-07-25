@@ -1,0 +1,733 @@
+{
+    "JavaScript": [
+        {
+            "id": "js_001",
+            "question": "What is the correct way to declare a variable in JavaScript?",
+            "options": [
+                "var x = 5;",
+                "variable x = 5;",
+                "v x = 5;",
+                "declare x = 5;"
+            ],
+            "answer": "var x = 5;",
+            "difficulty": "easy",
+            "explanation": "In JavaScript, variables can be declared using 'var', 'let', or 'const' keywords."
+        },
+        {
+            "id": "js_002",
+            "question": "Which method is used to add an element to the end of an array?",
+            "options": [
+                "push()",
+                "add()",
+                "append()",
+                "insert()"
+            ],
+            "answer": "push()",
+            "difficulty": "easy",
+            "explanation": "The push() method adds one or more elements to the end of an array and returns the new length of the array."
+        },
+        {
+            "id": "js_003",
+            "question": "What does '===' operator do in JavaScript?",
+            "options": [
+                "Assigns value",
+                "Compares value only",
+                "Compares value and type",
+                "Creates variable"
+            ],
+            "answer": "Compares value and type",
+            "difficulty": "medium",
+            "explanation": "The strict equality operator (===) compares both value and type, unlike == which only compares value."
+        },
+        {
+            "id": "js_004",
+            "question": "How do you create a function in JavaScript?",
+            "options": [
+                "function myFunction() {}",
+                "create myFunction() {}",
+                "def myFunction() {}",
+                "func myFunction() {}"
+            ],
+            "answer": "function myFunction() {}",
+            "difficulty": "easy",
+            "explanation": "Functions in JavaScript are declared using the 'function' keyword followed by the function name and parentheses."
+        },
+        {
+            "id": "js_005",
+            "question": "What is the result of 'typeof null' in JavaScript?",
+            "options": [
+                "null",
+                "undefined",
+                "object",
+                "string"
+            ],
+            "answer": "object",
+            "difficulty": "hard",
+            "explanation": "This is a well-known JavaScript quirk. 'typeof null' returns 'object' due to a bug in the original JavaScript implementation."
+        },
+        {
+            "id": "js_006",
+            "question": "Which of the following is NOT a JavaScript data type?",
+            "options": [
+                "string",
+                "boolean",
+                "float",
+                "undefined"
+            ],
+            "answer": "float",
+            "difficulty": "medium",
+            "explanation": "JavaScript has number, string, boolean, undefined, null, object, and symbol data types. 'float' is not a JavaScript data type."
+        },
+        {
+            "id": "js_007",
+            "question": "What is the correct way to write a JavaScript array?",
+            "options": [
+                "var colors = 'red', 'green', 'blue'",
+                "var colors = (1:'red', 2:'green', 3:'blue')",
+                "var colors = ['red', 'green', 'blue']",
+                "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
+            ],
+            "answer": "var colors = ['red', 'green', 'blue']",
+            "difficulty": "easy",
+            "explanation": "JavaScript arrays are written with square brackets and comma-separated values."
+        },
+        {
+            "id": "js_008",
+            "question": "How do you write 'Hello World' in an alert box?",
+            "options": [
+                "alertBox('Hello World');",
+                "msg('Hello World');",
+                "alert('Hello World');",
+                "msgBox('Hello World');"
+            ],
+            "answer": "alert('Hello World');",
+            "difficulty": "easy",
+            "explanation": "The alert() function displays an alert dialog with the specified message and an OK button."
+        }
+    ],
+    "Python": [
+        {
+            "id": "py_001",
+            "question": "How do you create a list in Python?",
+            "options": [
+                "list = []",
+                "list = ()",
+                "list = {}",
+                "list = <>"
+            ],
+            "answer": "list = []",
+            "difficulty": "easy",
+            "explanation": "Lists in Python are created using square brackets []."
+        },
+        {
+            "id": "py_002",
+            "question": "Which keyword is used to define a function in Python?",
+            "options": [
+                "function",
+                "def",
+                "func",
+                "define"
+            ],
+            "answer": "def",
+            "difficulty": "easy",
+            "explanation": "The 'def' keyword is used to define functions in Python."
+        },
+        {
+            "id": "py_003",
+            "question": "What is the correct way to import a module in Python?",
+            "options": [
+                "import module",
+                "include module",
+                "require module",
+                "use module"
+            ],
+            "answer": "import module",
+            "difficulty": "easy",
+            "explanation": "The 'import' statement is used to import modules in Python."
+        },
+        {
+            "id": "py_004",
+            "question": "How do you start a comment in Python?",
+            "options": [
+                "//",
+                "/*",
+                "#",
+                "<!--"
+            ],
+            "answer": "#",
+            "difficulty": "easy",
+            "explanation": "Comments in Python start with the hash symbol (#)."
+        },
+        {
+            "id": "py_005",
+            "question": "What is the output of print(type([]))?",
+            "options": [
+                "<class 'array'>",
+                "<class 'list'>",
+                "<class 'tuple'>",
+                "<class 'dict'>"
+            ],
+            "answer": "<class 'list'>",
+            "difficulty": "medium",
+            "explanation": "The type() function returns the type of an object. An empty [] creates a list, so type([]) returns <class 'list'>."
+        },
+        {
+            "id": "py_006",
+            "question": "Which of the following is used to create a dictionary in Python?",
+            "options": [
+                "{}",
+                "[]",
+                "()",
+                "''"
+            ],
+            "answer": "{}",
+            "difficulty": "easy",
+            "explanation": "Dictionaries in Python are created using curly braces {}."
+        },
+        {
+            "id": "py_007",
+            "question": "What is the correct way to create a for loop in Python?",
+            "options": [
+                "for i in range(10):",
+                "for (i = 0; i < 10; i++):",
+                "for i = 1 to 10:",
+                "foreach i in range(10):"
+            ],
+            "answer": "for i in range(10):",
+            "difficulty": "medium",
+            "explanation": "Python for loops use the 'for variable in iterable:' syntax."
+        },
+        {
+            "id": "py_008",
+            "question": "Which method is used to add an item to the end of a list?",
+            "options": [
+                "add()",
+                "append()",
+                "insert()",
+                "push()"
+            ],
+            "answer": "append()",
+            "difficulty": "easy",
+            "explanation": "The append() method adds an item to the end of a list."
+        }
+    ],
+    "React": [
+        {
+            "id": "react_001",
+            "question": "What is JSX in React?",
+            "options": [
+                "JavaScript XML",
+                "Java Syntax Extension",
+                "JSON XML",
+                "JavaScript Extension"
+            ],
+            "answer": "JavaScript XML",
+            "difficulty": "easy",
+            "explanation": "JSX stands for JavaScript XML and allows you to write HTML elements in JavaScript."
+        },
+        {
+            "id": "react_002",
+            "question": "How do you create a React component?",
+            "options": [
+                "function Component() {}",
+                "class Component extends React.Component {}",
+                "Both A and B",
+                "component Component() {}"
+            ],
+            "answer": "Both A and B",
+            "difficulty": "medium",
+            "explanation": "React components can be created as either function components or class components."
+        },
+        {
+            "id": "react_003",
+            "question": "What hook is used for state management in functional components?",
+            "options": [
+                "useState",
+                "useEffect",
+                "useContext",
+                "useReducer"
+            ],
+            "answer": "useState",
+            "difficulty": "medium",
+            "explanation": "The useState hook allows you to add state to functional components."
+        },
+        {
+            "id": "react_004",
+            "question": "How do you pass data to a child component?",
+            "options": [
+                "Through props",
+                "Through state",
+                "Through context",
+                "Through refs"
+            ],
+            "answer": "Through props",
+            "difficulty": "easy",
+            "explanation": "Props (properties) are used to pass data from parent to child components in React."
+        },
+        {
+            "id": "react_005",
+            "question": "What is the virtual DOM?",
+            "options": [
+                "A copy of the real DOM",
+                "A JavaScript representation of the DOM",
+                "A faster DOM",
+                "A React-specific DOM"
+            ],
+            "answer": "A JavaScript representation of the DOM",
+            "difficulty": "medium",
+            "explanation": "The virtual DOM is a JavaScript representation of the actual DOM that React uses for efficient updates."
+        },
+        {
+            "id": "react_006",
+            "question": "Which hook is used for side effects in React?",
+            "options": [
+                "useState",
+                "useEffect",
+                "useCallback",
+                "useMemo"
+            ],
+            "answer": "useEffect",
+            "difficulty": "medium",
+            "explanation": "The useEffect hook is used to perform side effects in functional components."
+        },
+        {
+            "id": "react_007",
+            "question": "What is the correct way to handle events in React?",
+            "options": [
+                "onClick={handleClick()}",
+                "onClick={handleClick}",
+                "onClick='handleClick()'",
+                "onClick='handleClick'"
+            ],
+            "answer": "onClick={handleClick}",
+            "difficulty": "medium",
+            "explanation": "Event handlers in React are passed as functions without calling them immediately."
+        },
+        {
+            "id": "react_008",
+            "question": "What is the purpose of React keys?",
+            "options": [
+                "To encrypt data",
+                "To help React identify list items",
+                "To create unique components",
+                "To handle events"
+            ],
+            "answer": "To help React identify list items",
+            "difficulty": "medium",
+            "explanation": "Keys help React identify which items have changed, are added, or are removed in lists."
+        }
+    ],
+    "HTML/CSS": [
+        {
+            "id": "html_001",
+            "question": "Which HTML tag is used for the largest heading?",
+            "options": [
+                "<h1>",
+                "<h6>",
+                "<heading>",
+                "<header>"
+            ],
+            "answer": "<h1>",
+            "difficulty": "easy",
+            "explanation": "The <h1> tag represents the largest heading in HTML, with <h6> being the smallest."
+        },
+        {
+            "id": "html_002",
+            "question": "How do you apply CSS to an HTML element?",
+            "options": [
+                "Using class or id",
+                "Using style attribute",
+                "Using external CSS file",
+                "All of the above"
+            ],
+            "answer": "All of the above",
+            "difficulty": "easy",
+            "explanation": "CSS can be applied through inline styles, internal styles, external stylesheets, or by targeting elements with classes and IDs."
+        },
+        {
+            "id": "html_003",
+            "question": "What does CSS stand for?",
+            "options": [
+                "Computer Style Sheets",
+                "Cascading Style Sheets",
+                "Creative Style Sheets",
+                "Colorful Style Sheets"
+            ],
+            "answer": "Cascading Style Sheets",
+            "difficulty": "easy",
+            "explanation": "CSS stands for Cascading Style Sheets, which describes how HTML elements are displayed."
+        },
+        {
+            "id": "html_004",
+            "question": "Which CSS property is used to change text color?",
+            "options": [
+                "color",
+                "text-color",
+                "font-color",
+                "text-style"
+            ],
+            "answer": "color",
+            "difficulty": "easy",
+            "explanation": "The 'color' property in CSS is used to set the color of text."
+        },
+        {
+            "id": "html_005",
+            "question": "How do you make text bold in CSS?",
+            "options": [
+                "font-weight: bold;",
+                "text-style: bold;",
+                "font-style: bold;",
+                "text-weight: bold;"
+            ],
+            "answer": "font-weight: bold;",
+            "difficulty": "easy",
+            "explanation": "The font-weight property with a value of 'bold' makes text bold in CSS."
+        },
+        {
+            "id": "html_006",
+            "question": "Which HTML attribute specifies an alternate text for an image?",
+            "options": [
+                "alt",
+                "src",
+                "title",
+                "longdesc"
+            ],
+            "answer": "alt",
+            "difficulty": "easy",
+            "explanation": "The 'alt' attribute provides alternative text for an image if it cannot be displayed."
+        },
+        {
+            "id": "html_007",
+            "question": "What is the correct CSS syntax for making all the <p> elements bold?",
+            "options": [
+                "p {text-size: bold;}",
+                "p {font-weight: bold;}",
+                "<p style='font-size: bold;'>",
+                "p {font-size: bold;}"
+            ],
+            "answer": "p {font-weight: bold;}",
+            "difficulty": "medium",
+            "explanation": "The correct CSS syntax uses the font-weight property with the value 'bold' to make text bold."
+        },
+        {
+            "id": "html_008",
+            "question": "Which CSS property is used to change the background color?",
+            "options": [
+                "bgcolor",
+                "color",
+                "background-color",
+                "background"
+            ],
+            "answer": "background-color",
+            "difficulty": "easy",
+            "explanation": "The 'background-color' property is used to set the background color of an element."
+        }
+    ],
+    "Node.js": [
+        {
+            "id": "node_001",
+            "question": "What is Node.js?",
+            "options": [
+                "A JavaScript runtime",
+                "A web browser",
+                "A database",
+                "A CSS framework"
+            ],
+            "answer": "A JavaScript runtime",
+            "difficulty": "easy",
+            "explanation": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine for server-side development."
+        },
+        {
+            "id": "node_002",
+            "question": "Which command is used to install packages in Node.js?",
+            "options": [
+                "npm install",
+                "node install",
+                "install npm",
+                "get package"
+            ],
+            "answer": "npm install",
+            "difficulty": "easy",
+            "explanation": "npm install is the command used to install packages from the npm registry."
+        },
+        {
+            "id": "node_003",
+            "question": "How do you import a module in Node.js?",
+            "options": [
+                "require('module')",
+                "import 'module'",
+                "include 'module'",
+                "use 'module'"
+            ],
+            "answer": "require('module')",
+            "difficulty": "easy",
+            "explanation": "The require() function is used to import modules in Node.js (CommonJS syntax)."
+        },
+        {
+            "id": "node_004",
+            "question": "What file contains project dependencies in Node.js?",
+            "options": [
+                "package.json",
+                "dependencies.json",
+                "node.json",
+                "modules.json"
+            ],
+            "answer": "package.json",
+            "difficulty": "easy",
+            "explanation": "The package.json file contains metadata about the project including dependencies."
+        },
+        {
+            "id": "node_005",
+            "question": "Which method is used to create a server in Node.js?",
+            "options": [
+                "http.createServer()",
+                "server.create()",
+                "http.server()",
+                "createServer()"
+            ],
+            "answer": "http.createServer()",
+            "difficulty": "medium",
+            "explanation": "The http.createServer() method creates an HTTP server instance in Node.js."
+        },
+        {
+            "id": "node_006",
+            "question": "What is npm?",
+            "options": [
+                "Node Package Manager",
+                "New Project Manager",
+                "Node Program Manager",
+                "Network Package Manager"
+            ],
+            "answer": "Node Package Manager",
+            "difficulty": "easy",
+            "explanation": "npm stands for Node Package Manager and is the default package manager for Node.js."
+        },
+        {
+            "id": "node_007",
+            "question": "Which of the following is a core module in Node.js?",
+            "options": [
+                "express",
+                "fs",
+                "lodash",
+                "axios"
+            ],
+            "answer": "fs",
+            "difficulty": "medium",
+            "explanation": "The 'fs' (file system) module is a core Node.js module for working with files and directories."
+        },
+        {
+            "id": "node_008",
+            "question": "What is the event loop in Node.js?",
+            "options": [
+                "A function that loops events",
+                "A mechanism that handles asynchronous operations",
+                "A type of variable",
+                "A debugging tool"
+            ],
+            "answer": "A mechanism that handles asynchronous operations",
+            "difficulty": "hard",
+            "explanation": "The event loop is what allows Node.js to perform non-blocking I/O operations by handling asynchronous callbacks."
+        }
+    ],
+    "TypeScript": [
+        {
+            "id": "ts_001",
+            "question": "What is TypeScript?",
+            "options": [
+                "A superset of JavaScript",
+                "A database",
+                "A web framework",
+                "A CSS preprocessor"
+            ],
+            "answer": "A superset of JavaScript",
+            "difficulty": "easy",
+            "explanation": "TypeScript is a strongly typed programming language that builds on JavaScript by adding static type definitions."
+        },
+        {
+            "id": "ts_002",
+            "question": "How do you define a variable with a specific type in TypeScript?",
+            "options": [
+                "let name: string = 'John';",
+                "let name = 'John': string;",
+                "string name = 'John';",
+                "let name string = 'John';"
+            ],
+            "answer": "let name: string = 'John';",
+            "difficulty": "easy",
+            "explanation": "In TypeScript, you specify the type after the variable name using a colon."
+        },
+        {
+            "id": "ts_003",
+            "question": "What is an interface in TypeScript?",
+            "options": [
+                "A contract that defines the structure of an object",
+                "A function",
+                "A variable type",
+                "A class method"
+            ],
+            "answer": "A contract that defines the structure of an object",
+            "difficulty": "medium",
+            "explanation": "An interface in TypeScript defines the structure of an object, specifying what properties and methods it should have."
+        },
+        {
+            "id": "ts_004",
+            "question": "How do you compile TypeScript to JavaScript?",
+            "options": [
+                "tsc filename.ts",
+                "compile filename.ts",
+                "node filename.ts",
+                "js filename.ts"
+            ],
+            "answer": "tsc filename.ts",
+            "difficulty": "easy",
+            "explanation": "The TypeScript compiler (tsc) is used to compile TypeScript files to JavaScript."
+        },
+        {
+            "id": "ts_005",
+            "question": "What is the 'any' type in TypeScript?",
+            "options": [
+                "A type that can be anything",
+                "A numeric type",
+                "A string type",
+                "An error type"
+            ],
+            "answer": "A type that can be anything",
+            "difficulty": "easy",
+            "explanation": "The 'any' type disables type checking and can represent any JavaScript value."
+        }
+    ],
+    "Java": [
+        {
+            "id": "java_001",
+            "question": "What is the correct way to declare a variable in Java?",
+            "options": [
+                "int x = 5;",
+                "variable x = 5;",
+                "var x = 5;",
+                "x = 5;"
+            ],
+            "answer": "int x = 5;",
+            "difficulty": "easy",
+            "explanation": "In Java, variables must be declared with their data type, such as 'int' for integers."
+        },
+        {
+            "id": "java_002",
+            "question": "Which keyword is used to create a class in Java?",
+            "options": [
+                "class",
+                "Class",
+                "create",
+                "new"
+            ],
+            "answer": "class",
+            "difficulty": "easy",
+            "explanation": "The 'class' keyword is used to define a class in Java."
+        },
+        {
+            "id": "java_003",
+            "question": "What is the main method signature in Java?",
+            "options": [
+                "public static void main(String[] args)",
+                "public void main(String[] args)",
+                "static void main(String[] args)",
+                "main(String[] args)"
+            ],
+            "answer": "public static void main(String[] args)",
+            "difficulty": "medium",
+            "explanation": "The main method in Java must be public, static, void, and take a String array as parameter."
+        },
+        {
+            "id": "java_004",
+            "question": "Which of these is NOT a Java primitive data type?",
+            "options": [
+                "int",
+                "boolean",
+                "String",
+                "double"
+            ],
+            "answer": "String",
+            "difficulty": "medium",
+            "explanation": "String is a class in Java, not a primitive data type. The primitive types include int, boolean, double, char, etc."
+        },
+        {
+            "id": "java_005",
+            "question": "How do you create an object in Java?",
+            "options": [
+                "new ClassName()",
+                "create ClassName()",
+                "ClassName.new()",
+                "make ClassName()"
+            ],
+            "answer": "new ClassName()",
+            "difficulty": "easy",
+            "explanation": "Objects in Java are created using the 'new' keyword followed by the constructor call."
+        }
+    ],
+    "C++": [
+        {
+            "id": "cpp_001",
+            "question": "Which header file is required for input/output operations in C++?",
+            "options": [
+                "<iostream>",
+                "<stdio.h>",
+                "<input.h>",
+                "<output.h>"
+            ],
+            "answer": "<iostream>",
+            "difficulty": "easy",
+            "explanation": "The <iostream> header file contains definitions for input/output operations like cin and cout."
+        },
+        {
+            "id": "cpp_002",
+            "question": "What is the correct way to declare a pointer in C++?",
+            "options": [
+                "int* ptr;",
+                "int ptr*;",
+                "pointer int ptr;",
+                "int &ptr;"
+            ],
+            "answer": "int* ptr;",
+            "difficulty": "medium",
+            "explanation": "Pointers in C++ are declared using the asterisk (*) symbol after the data type."
+        },
+        {
+            "id": "cpp_003",
+            "question": "Which operator is used for dynamic memory allocation in C++?",
+            "options": [
+                "new",
+                "malloc",
+                "alloc",
+                "create"
+            ],
+            "answer": "new",
+            "difficulty": "medium",
+            "explanation": "The 'new' operator is used for dynamic memory allocation in C++."
+        },
+        {
+            "id": "cpp_004",
+            "question": "What is the scope resolution operator in C++?",
+            "options": [
+                "::",
+                ".",
+                "->",
+                "::>"
+            ],
+            "answer": "::",
+            "difficulty": "medium",
+            "explanation": "The scope resolution operator (::) is used to access global variables and class members."
+        },
+        {
+            "id": "cpp_005",
+            "question": "Which of the following is a valid C++ comment?",
+            "options": [
+                "// This is a comment",
+                "/* This is a comment",
+                "# This is a comment",
+                "<!-- This is a comment -->"
+            ],
+            "answer": "// This is a comment",
+            "difficulty": "easy",
+            "explanation": "C++ supports both // for single-line comments and /* */ for multi-line comments."
+        }
+    ]
+}
