@@ -5,7 +5,7 @@ const currentQuiz = {
   questions: [],
   currentQuestion: 0,
   score: 0,
-  category: "JavaScript",
+  category: null,
   timeLeft: 30,
   selectedAnswer: null,
   timer: null,
