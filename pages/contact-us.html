@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CodeIQ.ai</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-500">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path id="close-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" style="display: none;"></path>
+                    </svg>
+                </button>
+
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-lg">
+                        <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <a href="../index.html" class="text-xl sm:text-2xl font-bold text-zinc-900">CodeIQ.ai</a>
+                </div>
+
+                <!-- Desktop navigation -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="../index.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Home</a>
+                    <a href="quiz.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Quiz</a>
+                    <a href="leaderboard.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Leaderboard</a>
+                    <a href="sign-up.html" class="bg-zinc-800 text-white px-4 py-2 rounded-lg hover:bg-zinc-900 transition-colors">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- Mobile navigation menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-zinc-200 mt-2 pt-2 pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="../index.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Home</a>
+                    <a href="quiz.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Quiz</a>
+                    <a href="leaderboard.html" class="text-zinc-600 hover:text-zinc-800 px-3 py-2 rounded-lg hover:bg-zinc-100 transition-colors">Leaderboard</a>
+                    <a href="sign-up.html" class="bg-zinc-800 text-white px-3 py-2 rounded-lg hover:bg-zinc-900 transition-colors text-center">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <!-- Header -->
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-zinc-900 mb-4">Contact Us</h1>
+            <p class="text-lg sm:text-xl text-zinc-600 max-w-2xl mx-auto">
+                Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg border border-zinc-200 p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-6">Send us a Message</h2>
+                
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-zinc-700 mb-2">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                class="w-full px-4 py-3 border border-zinc-300 rounded-xl focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all text-base">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-zinc-700 mb-2">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                class="w-full px-4 py-3 border border-zinc-300 rounded-xl focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all text-base">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-zinc-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 border border-zinc-300 rounded-xl focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all text-base">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-zinc-700 mb-2">Subject</label>
+                        <select id="subject" name="subject" required
+                            class="w-full px-4 py-3 border border-zinc-300 rounded-xl focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all text-base bg-white">
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-zinc-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 border border-zinc-300 rounded-xl focus:ring-2 focus:ring-zinc-500 focus:border-transparent transition-all text-base resize-none"
+                            placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    
+                    <button type="submit"
+                        class="w-full bg-zinc-800 text-white py-3 px-6 rounded-xl font-semibold hover:bg-zinc-900 focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 transition-all text-base">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="success-message" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <p class="text-green-800 font-medium">Thank you for your message! We'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-6 sm:space-y-8">
+                <!-- Contact Details -->
+                <div class="bg-white rounded-xl shadow-lg border border-zinc-200 p-6 sm:p-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-6">Get in Touch</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex items-center justify-center w-12 h-12 bg-zinc-100 rounded-lg flex-shrink-0">
+                                <svg class="h-6 w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-zinc-900 mb-1">Email</h3>
+                                <p class="text-zinc-600">support@codeiq.ai</p>
+                                <p class="text-sm text-zinc-500 mt-1">We'll respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex items-center justify-center w-12 h-12 bg-zinc-100 rounded-lg flex-shrink-0">
+                                <svg class="h-6 w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-zinc-900 mb-1">Location</h3>
+                                <p class="text-zinc-600">San Francisco, CA</p>
+                                <p class="text-sm text-zinc-500 mt-1">Remote-first company</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex items-center justify-center w-12 h-12 bg-zinc-100 rounded-lg flex-shrink-0">
+                                <svg class="h-6 w-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-zinc-900 mb-1">Response Time</h3>
+                                <p class="text-zinc-600">Within 24 hours</p>
+                                <p class="text-sm text-zinc-500 mt-1">Monday to Friday, 9 AM - 6 PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="bg-white rounded-xl shadow-lg border border-zinc-200 p-6 sm:p-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-zinc-900 mb-6">Frequently Asked Questions</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="border-b border-zinc-200 pb-4">
+                            <h3 class="text-lg font-semibold text-zinc-900 mb-2">How do I reset my password?</h3>
+                            <p class="text-zinc-600">Click on "Forgot Password" on the sign-in page and follow the instructions sent to your email.</p>
+                        </div>
+                        
+                        <div class="border-b border-zinc-200 pb-4">
+                            <h3 class="text-lg font-semibold text-zinc-900 mb-2">Can I retake a quiz?</h3>
+                            <p class="text-zinc-600">Yes, you can retake quizzes to improve your score. Your best score will be displayed on the leaderboard.</p>
+                        </div>
+                        
+                        <div class="border-b border-zinc-200 pb-4">
+                            <h3 class="text-lg font-semibold text-zinc-900 mb-2">How are badges earned?</h3>
+                            <p class="text-zinc-600">Badges are awarded based on your quiz performance: Bronze (60-79%), Silver (80-89%), Gold (90-100%).</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-zinc-900 mb-2">Is CodeIQ.ai free to use?</h3>
+                            <p class="text-zinc-600">Yes, CodeIQ.ai is completely free to use. Create an account and start testing your coding skills today!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-zinc-200 mt-12 sm:mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="flex items-center justify-center w-8 h-8 bg-zinc-800 rounded-lg">
+                            <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-zinc-900">CodeIQ.ai</span>
+                    </div>
+                    <p class="text-zinc-600 mb-4 text-sm sm:text-base">
+                        Test your coding skills with AI-generated questions and compete with developers worldwide.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-2">
+                    <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Links</h3>
+                    <div class="space-y-1">
+                        <a href="../index.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Home</a>
+                        <a href="quiz.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Start Quiz</a>
+                        <a href="leaderboard.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Leaderboard</a>
+                    </div>
+                </div>
+
+                <!-- Legal -->
+                <div class="space-y-2">
+                    <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-3">Legal</h3>
+                    <div class="space-y-1">
+                        <a href="privacy-policy.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Terms of Service</a>
+                        <a href="contact-us.html" class="block text-zinc-600 hover:text-zinc-800 transition-colors text-sm">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-zinc-200 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+                <p class="text-zinc-500 text-sm text-center sm:text-left">
+                    <span id="copyright"></span>
+                </p>
+                <div class="flex items-center space-x-4">
+                    <span class="text-zinc-500 text-sm">Made with ❤️ for developers</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
+
+        // Contact form handling
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                contactForm.classList.add('hidden');
+                successMessage.textContent = "Thank you for your message! Please note that this form is a demo and your message has not been sent.";
+                successMessage.classList.remove('hidden');
+                
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    contactForm.classList.remove('hidden');
+                    successMessage.classList.add('hidden');
+                    contactForm.reset();
+                }, 5000);
+            }, 1000);
+        });
+
+        // Set copyright year
+        const year = new Date().getFullYear();
+        document.getElementById('copyright').textContent = `© ${year} CodeIQ.ai - All rights reserved`;
+    </script>
+</body>
+
+</html>
