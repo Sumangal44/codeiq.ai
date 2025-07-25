@@ -21,7 +21,7 @@ function initializeResults() {
   const category = localStorage.getItem("category") || "JavaScript";
 
   if (!localStorage.getItem("quizScore")) {
-    window.location.href = "../../pages/quiz.html";
+    window.location.href = "quiz.html";
     return;
   }
 
