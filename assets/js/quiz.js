@@ -236,7 +236,7 @@ function selectAnswer(answer, button) {
   // Remove previous selection
   document.querySelectorAll("#options-container button").forEach((btn) => {
     btn.classList.remove("border-zinc-600", "bg-zinc-50")
-    btn.classList.add("border-gray-200")
+    btn.classList.add("border-zinc-200")
   })
 
   // Highlight selected answer
