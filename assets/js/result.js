@@ -57,7 +57,9 @@ function displayResults(score, total, percentage, badge, category) {
   const userGreeting = document.getElementById("user-greeting");
   const currentUser = getCurrentUser();
   if (currentUser) {
-    const firstName = currentUser.name.split(" ")[0] || "User";
+    const firstName = currentUser.name && typeof currentUser.name === "string"
+      ? currentUser.name.split(" ")[0] || "User"
+      : "User";
     userGreeting.textContent = `Great job, ${firstName}! Here are your results:`;
   } else {
     userGreeting.textContent = "Great job! Here are your results:";
